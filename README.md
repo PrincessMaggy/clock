@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Free code Camp - Markdown Previewer solution
+# Free code Camp - 25+5 Clock solution
 
-This is a solution to the [Markdown Previewer challenge on Free Code Camp]
+This is a solution to the [25 + 5 Clock challenge on Free Code Camp]
 
 ## Table of contents
 
