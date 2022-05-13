@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Length from './components/Length';
 import './styles/app.scss';
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
   return (
     <div className="App">
       <h1>{formatTime(displayTime)}</h1>
+      
+    <Length/>
     </div>
+
   );
 }
 
