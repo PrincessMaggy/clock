@@ -43,8 +43,27 @@ function App() {
   }
 
   const controlTime =() =>{
-    
-
+    let second = 1000;
+    let date = new Date().getTime();
+    let nextDate = new Date().getTime() + second;
+    let onBreakVar = onBreak; 
+    if(!timerOn){
+      let interval = setInterval(()=>{
+        date =new Date().getTime();
+        if(date > nextDate){
+          setDisplayTime(prev =>{
+            return prev - 1;
+          })
+          nextDate += second;
+        }
+      }, 30)
+      localStorage.clear();
+      localStorage.setItem('interval-id', interval)
+    }
+    if(timerOn){
+      clearInterval(localStorage.getItem('interval-id'))
+    }
+    setTimerOn(!timerOn);
   }
 
   const resetTime =()=> {
