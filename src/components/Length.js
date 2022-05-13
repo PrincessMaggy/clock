@@ -10,12 +10,12 @@ import refresh from '../images/refresh.png'
 
 const Length =({title, changeTime, type, time, formatTime})=>{
     return(
-        <div>
+        <div className="length">
             <h3>{title}</h3>
-            <div className="times">
-                <img src={down} alt="" />
+            <div className="times1">
+                <div><img src={down} alt="" onClick={()=> changeTime(-60, type)} /></div>
                 <h3>{formatTime(time)}</h3>
-                <img src={up} alt="" />
+                <div><img src={up} alt="" className="up" onClick={()=> changeTime(60, type)} /></div>
             </div>
         </div>
     )
