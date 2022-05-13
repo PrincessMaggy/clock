@@ -11,9 +11,9 @@ import refresh from '../images/refresh.png'
 const Length =({title, changeTime, type, time, formatTime})=>{
     return(
         <div>
-            {/* <h3>{Title}</h3> */}
+            <h3>{title}</h3>
             <div className="times">
-                <img src={up} />
+                <img src={down} alt="" />
             </div>
         </div>
     )

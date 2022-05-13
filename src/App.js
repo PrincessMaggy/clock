@@ -13,9 +13,17 @@ function App() {
   }
   return (
     <div className="App">
+      
       <h1>{formatTime(displayTime)}</h1>
       
-    <Length/>
+      <Length 
+      title={"break length"} 
+      changeTime={null} 
+      type={"break"} 
+      time={null} 
+      formatTime={formatTime}
+      />
+    
     </div>
 
   );
