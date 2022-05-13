@@ -14,6 +14,8 @@ const Length =({title, changeTime, type, time, formatTime})=>{
             <h3>{title}</h3>
             <div className="times">
                 <img src={down} alt="" />
+                <h3>{formatTime(time)}</h3>
+                <img src={up} alt="" />
             </div>
         </div>
     )

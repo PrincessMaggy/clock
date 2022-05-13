@@ -13,11 +13,11 @@ function App() {
   }
   return (
     <div className="App">
-      
+
       <h1>{formatTime(displayTime)}</h1>
       
       <Length 
-      title={"break length"} 
+      title={"Break Length"} 
       changeTime={null} 
       type={"break"} 
       time={null} 
