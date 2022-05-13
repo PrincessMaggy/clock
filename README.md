@@ -38,6 +38,10 @@ Users should be able to:
 
 ## My process
 - I set up react using node js.
+- Installed Sass.
+- Built project.
+- Added Basic Styling.
+- Hosted on github pages.
 
 
 ### Built with

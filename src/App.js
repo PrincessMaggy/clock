@@ -97,7 +97,7 @@ function App() {
     <div className="App">
       <h1> POMODORO CLOCK</h1>
       <div className='comp'>
-        <Length 
+        <Length  id="break-label"
         title={"Break Length"} 
         changeTime={changeTime} 
         type={"break"} 
@@ -105,7 +105,7 @@ function App() {
         formatTime={formatTime}
         />
       
-      <Length 
+      <Length id="session-label"
         title={"Session Length"} 
         changeTime={changeTime} 
         type={"session"} 
@@ -116,12 +116,12 @@ function App() {
 
       <h3>{onBreak? "Break" : "Session"}</h3>
 
-      <h1>{formatTime(displayTime)}</h1>
+      <h1 id='time-left'>{formatTime(displayTime)}</h1>
      <div className='comp'> 
-      <div onClick={controlTime}>{ timerOn? <img src={pause}  id="pause" alt=""/>: <img src={play} id="play" alt=""/>}</div>
+      <div id='start_stop' onClick={controlTime}>{ timerOn? <img src={pause}  id="pause" alt=""/>: <img src={play} id="play" alt=""/>}</div>
     
       <div onClick={resetTime}>
-        <img src={refresh} alt ="" id='refresh' /></div>    
+        <img src={refresh} alt ="" id='reset' /></div>    
     </div>
     </div>
 
