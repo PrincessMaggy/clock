@@ -18,6 +18,15 @@ function App() {
   const [sessionTime, setSessionTime] = useState(25*60);
   const [timerOn, setTimerOn] =useState(false);
   const [onBreak, setOnBreak] = useState (false);
+  const [breakAudio, setBreakAudio] = useState(new Audio("./beep.mp3"))
+
+
+  const playBeep =()=>{
+    breakAudio.currentTime=0;
+    breakAudio.play();
+  }
+
+
 
   const formatTime =(time) =>{
     let minutes = Math.floor(time/60);
@@ -52,6 +61,18 @@ function App() {
         date =new Date().getTime();
         if(date > nextDate){
           setDisplayTime(prev =>{
+            if(prev <= 0 && !onBreakVar){
+              playBeep();
+              onBreakVar =true;
+              setOnBreak (true);
+              return breakTime;
+            }
+            else if(prev <= 0 && onBreakVar){
+              playBeep();
+              onBreakVar =false;
+              setOnBreak (true);
+              return sessionTime;
+            }
             return prev - 1;
           })
           nextDate += second;
@@ -92,6 +113,9 @@ function App() {
         formatTime={formatTime}
         />
     </div>
+
+      <h3>{onBreak? "Break" : "Session"}</h3>
+
       <h1>{formatTime(displayTime)}</h1>
      <div className='comp'> 
       <div onClick={controlTime}>{ timerOn? <img src={pause}  id="pause" alt=""/>: <img src={play} id="play" alt=""/>}</div>
