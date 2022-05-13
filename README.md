@@ -20,10 +20,6 @@ This is a solution to the [25 + 5 Clock challenge on Free Code Camp]
 
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
 
 ### Screenshot
 
@@ -51,7 +47,7 @@ Users should be able to:
 - React
 
 ## Useful Resources
-[]
+[https://www.youtube.com/watch?v=8khA0nJzh8A]
 ## Author
 
 - Website - [PrincessMaggy](https://princessmaggy.github.io/My-Portfolio/)
