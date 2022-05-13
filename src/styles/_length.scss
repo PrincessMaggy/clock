@@ -5,7 +5,13 @@
 }
 
 img {
-    width: 50%;
+    width: 42%;
+    background-color: silver;
+    color: white;
+    &:hover {
+        background-color: rgb(3, 75, 75);
+        transition: 0.5s ease;
+    }
 }
 
 .up {
