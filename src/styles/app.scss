@@ -9,6 +9,7 @@ body {
     background-color: #333;
     text-align: center;
     padding: 3em;
+    font-size: 18px;
 }
 
 h1 {
@@ -19,6 +20,15 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        max-width: 60%;
+        background-color: silver;
+        color: white;
+        &:hover {
+            background-color: rgb(3, 75, 75);
+            transition: 0.5s ease;
+        }
+    }
 }
 
 @import 'length';

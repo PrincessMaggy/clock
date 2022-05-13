@@ -1,6 +1,15 @@
 import React, {useState} from 'react';
+
+//importing components
 import Length from './components/Length';
+
+//importing sass styling
 import './styles/app.scss';
+//importing images
+
+import pause from './images/pause.png';
+import play from './images/play.png';
+import refresh from './images/refresh.png';
 
 function App() {
 //states
@@ -8,6 +17,7 @@ function App() {
   const [breakTime, setBreakTime] = useState(5*60);
   const [sessionTime, setSessionTime] = useState(25*60);
   const [timerOn, setTimerOn] =useState(false);
+  const [onBreak, setOnBreak] = useState (false);
 
   const formatTime =(time) =>{
     let minutes = Math.floor(time/60);
@@ -16,7 +26,7 @@ function App() {
   }
 
   const changeTime =(amount, type) =>{
-    if (type =='break'){
+    if (type ==='break'){
       if(breakTime <= 60 && amount <0){
         return;
       }
@@ -30,6 +40,17 @@ function App() {
         setDisplayTime(sessionTime + amount)
       }
     }
+  }
+
+  const controlTime =() =>{
+    
+
+  }
+
+  const resetTime =()=> {
+    setDisplayTime(25*60);
+    setBreakTime(5*60);
+    setSessionTime(25*60);
   }
 
   return (
@@ -53,7 +74,12 @@ function App() {
         />
     </div>
       <h1>{formatTime(displayTime)}</h1>
-      
+     <div className='comp'> 
+      <div onClick={controlTime}>{ timerOn? <img src={pause}  id="pause" alt=""/>: <img src={play} id="play" alt=""/>}</div>
+    
+      <div onClick={resetTime}>
+        <img src={refresh} alt ="" id='refresh' /></div>    
+    </div>
     </div>
 
   );

@@ -4,16 +4,10 @@
     padding: 1em;
 }
 
-img {
-    width: 42%;
-    background-color: silver;
-    color: white;
-    &:hover {
-        background-color: rgb(3, 75, 75);
-        transition: 0.5s ease;
-    }
+.up {
+    width: 46%;
 }
 
-.up {
-    width: 32%;
+#play {
+    max-width: 80%;
 }
